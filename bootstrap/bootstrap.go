@@ -2,9 +2,9 @@ package bootstrap
 
 import (
 	"fmt"
-	"github.com/qingconglaixueit/wechatbot/handlers"
-	"github.com/qingconglaixueit/wechatbot/pkg/logger"
 	"github.com/eatmoreapple/openwechat"
+	"github.com/iglev/wechatbot/handlers"
+	"github.com/iglev/wechatbot/pkg/logger"
 )
 
 func Run() {

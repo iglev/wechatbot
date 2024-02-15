@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 	"github.com/eatmoreapple/openwechat"
-	"github.com/qingconglaixueit/wechatbot/gpt"
-	"github.com/qingconglaixueit/wechatbot/pkg/logger"
-	"github.com/qingconglaixueit/wechatbot/service"
+	"github.com/iglev/wechatbot/gpt"
+	"github.com/iglev/wechatbot/pkg/logger"
+	"github.com/iglev/wechatbot/service"
 	"strings"
 )
 

@@ -2,9 +2,9 @@ package handlers
 
 import (
 	"fmt"
-	"github.com/qingconglaixueit/wechatbot/config"
-	"github.com/qingconglaixueit/wechatbot/pkg/logger"
 	"github.com/eatmoreapple/openwechat"
+	"github.com/iglev/wechatbot/config"
+	"github.com/iglev/wechatbot/pkg/logger"
 	"github.com/patrickmn/go-cache"
 	"github.com/skip2/go-qrcode"
 	"log"

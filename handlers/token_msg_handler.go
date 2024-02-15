@@ -2,9 +2,9 @@ package handlers
 
 import (
 	"fmt"
-	"github.com/qingconglaixueit/wechatbot/pkg/logger"
-	"github.com/qingconglaixueit/wechatbot/service"
 	"github.com/eatmoreapple/openwechat"
+	"github.com/iglev/wechatbot/pkg/logger"
+	"github.com/iglev/wechatbot/service"
 )
 
 var _ MessageHandlerInterface = (*TokenMessageHandler)(nil)
