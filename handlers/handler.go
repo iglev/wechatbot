@@ -35,6 +35,7 @@ func QrCodeCallBack(uuid string) {
 	}
 }
 
+// NewHandler new handler
 func NewHandler() (msgFunc func(msg *openwechat.Message), err error) {
 	dispatcher := openwechat.NewMessageMatchDispatcher()
 
@@ -67,5 +68,9 @@ func NewHandler() (msgFunc func(msg *openwechat.Message), err error) {
 	dispatcher.RegisterHandler(func(message *openwechat.Message) bool {
 		return !(strings.Contains(message.Content, config.LoadConfig().SessionClearToken) || message.IsSendByGroup() || message.IsFriendAdd())
 	}, UserMessageContextHandler())
-	return openwechat.DispatchMessage(dispatcher), nil
+	//return openwechat.DispatchMessage(dispatcher), nil
+	msgFunc = func(msg *openwechat.Message) {
+		dispatcher.Dispatch(msg)
+	}
+	return msgFunc, nil
 }

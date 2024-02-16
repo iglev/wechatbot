@@ -58,7 +58,7 @@ func NewGroupMessageHandler(msg *openwechat.Message) (MessageHandlerInterface, e
 
 	userService := service.NewUserService(c, groupSender)
 	handler := &GroupMessageHandler{
-		self:    sender.Self,
+		self:    sender.Self(),
 		msg:     msg,
 		group:   group,
 		sender:  groupSender,

@@ -44,30 +44,6 @@
 > * 项目仅供娱乐，滥用可能有微信封禁的风险，请勿用于商业用途。
 > * 请注意收发敏感信息，本项目不做信息过滤。
 
-# 使用docker运行
-
-你可以使用docker快速运行本项目。
-
-`第一种：基于环境变量运行`
-
-```sh
-# 运行项目，环境变量参考下方配置说明
-$ docker run -itd --name wechatbot --restart=always \
- -e APIKEY=换成你的key \
- -e AUTO_PASS=false \
- -e SESSION_TIMEOUT=60s \
- -e MODEL=text-davinci-003 \
- -e MAX_TOKENS=512 \
- -e TEMPREATURE=0.9 \
- -e REPLY_PREFIX=我是来自机器人回复: \
- -e SESSION_CLEAR_TOKEN=下一个问题 \
- docker.mirrors.sjtug.sjtu.edu.cn/qingshui869413421/wechatbot:latest
-
-# 查看二维码
-$ docker exec -it wechatbot bash 
-$ tail -f -n 50 /app/run.log 
-```
-
 ```
 # 守护在后台运行
 $ nohup ./wechatbot &> run.log &

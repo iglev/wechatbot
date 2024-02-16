@@ -63,6 +63,7 @@ func LoadConfig() *Configuration {
 				return
 			}
 		}
+		log.Printf("config.json=%+v\n", config)
 		// 有环境变量使用环境变量
 		ApiKey := os.Getenv("APIKEY")
 		AutoPass := os.Getenv("AUTO_PASS")
